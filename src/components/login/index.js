@@ -27,22 +27,20 @@ const Login = () => {
   };
 
   return (
-    <div className='container'>
-      <div className='register'>
-        <div className='register-card'>
-          <h2>Login</h2>
-          <form>
-            <div className='mb-4'>
-              <input type="email" className='input-field' name="email" value={formData.email} onChange={handleChange} placeholder="Email" />
-            </div>
-            <div className='mb-4'>
-              <input type="password" className='input-field' name="password" value={formData.password} onChange={handleChange} placeholder="Password" />
-            </div>
-            <div className='mb-4'>
-              <button onClick={handleSubmit} className='submit'>{"Login"}</button>
-            </div>
-          </form>
-        </div>
+    <div className='register'>
+      <div className='register-card'>
+        <h2>Login</h2>
+        <form>
+          <div className='mb-4'>
+            <input type="email" className='input-field' name="email" value={formData.email} onChange={handleChange} placeholder="Email" />
+          </div>
+          <div className='mb-4'>
+            <input type="password" className='input-field' name="password" value={formData.password} onChange={handleChange} placeholder="Password" />
+          </div>
+          <div className='mb-4'>
+            <button onClick={handleSubmit} className='submit'>{"Login"}</button>
+          </div>
+        </form>
       </div>
     </div>
   )

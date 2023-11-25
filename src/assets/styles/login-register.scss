@@ -1,6 +1,9 @@
 .register {
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 45vh;
+  margin: 0px 22px;
   .register-card {
     border-radius: 8px;
     width: 526px;
@@ -18,7 +21,6 @@
     }
     button {
       @extend .my-btn;
-      background-color: rgb(45, 167, 216);
     }
   }
 }

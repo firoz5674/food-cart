@@ -30,6 +30,12 @@ import automnDinner4 from "../../assets/images/food-images/automan-dinner4.jpg";
 import automnDinner5 from "../../assets/images/food-images/winter-dinner1.jpg";
 import automnDinner6 from "../../assets/images/food-images/winter-dinner2.jpg";
 
+import offer1 from "../../assets/images/food-offer.jpg";
+import offer2 from "../../assets/images/offer2.jpg";
+import offer3 from "../../assets/images/food4.jpg";
+import ProductSlider from '../product-slider/ProductSlider';
+import Filter from '../filter';
+
 
 const cardData = [
   {
@@ -195,6 +201,7 @@ const Card = () => {
   }; return (
 
     <>
+      {/* product modal */}
       <Modal isOpen={modal} toggle={toggle} centered className='product-modal'>
         <ModalHeader toggle={toggle}></ModalHeader>
         <ModalBody>
@@ -225,34 +232,50 @@ const Card = () => {
           </Button>
         </ModalFooter>
       </Modal>
-      <div className='col-md-9 col-lg-9'>
+
+      <div className='container'>
         <div className='row'>
-          {cardItems?.map((card) => {
-            const itemCountInCart = cart.filter((cartItem) => cartItem.id === card.id).length;
-            return (
-              <div className='col-md-6 col-lg-6 col-xl-4 product-col'>
-                <div className='product-card' key={card.id} onClick={toggle}>
-                  <img src={card.img} alt="" />
-                  <div className='product-card__body'>
-                    <h3 className='title'>{card.title}</h3>
-                    <div className='button-container'>
-                      <button
-                        className={card.favourite ? 'favourite-button favourited' : 'favourite-button'}
-                        disabled={card.favourite}
-                        onClick={() => handleFavoriteClick(card.id)}
-                      >
-                        <img src={favoriteIcon} className='img-fluid icon' alt="" />{card.favourite ? 'Favourited' : 'Favourite'}
-                      </button>
-                      <button className='cart-button' onClick={() => handleAddToCart(card.id)}>
-                        <img src={cartIcon} className='img-fluid icon' alt="" />Add
-                        <span className='cart-item-count'>{itemCountInCart}</span>
-                      </button>
+          <div className='col-md-3 col-lg-3'>
+            <div className='filter-section'>
+              <Filter />
+            </div>
+            <ProductSlider />
+            <div className='offer-image'>
+              <img src={offer1} className='img-fluid' alt="offer1" />
+              <img src={offer2} className='img-fluid' alt="offer2" />
+              <img src={offer3} className='img-fluid' alt="offer3" />
+            </div>
+          </div>
+          <div className='col-md-9 col-lg-9'>
+            <div className='row'>
+              {cardItems?.map((card) => {
+                const itemCountInCart = cart.filter((cartItem) => cartItem.id === card.id).length;
+                return (
+                  <div className='col-md-6 col-lg-6 col-xl-4 product-col'>
+                    <div className='product-card' key={card.id} >
+                      <img src={card.img} onClick={toggle} className='img-fluid' alt="" />
+                      <div className='product-card__body'>
+                        <h3 className='title'>{card.title}</h3>
+                        <div className='button-container'>
+                          <button
+                            className={card.favourite ? 'favourite-button favourited' : 'favourite-button'}
+                            disabled={card.favourite}
+                            onClick={() => handleFavoriteClick(card.id)}
+                          >
+                            <img src={favoriteIcon} className='img-fluid icon' alt="" />{card.favourite ? 'Favourited' : 'Favourite'}
+                          </button>
+                          <button className='cart-button' onClick={() => handleAddToCart(card.id)}>
+                            <img src={cartIcon} className='img-fluid icon' alt="" />Add
+                            <span className='cart-item-count'>{itemCountInCart}</span>
+                          </button>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            );
-          })}
+                );
+              })}
+            </div>
+          </div>
         </div>
       </div>
       {/* <div className='card-wrapper'>

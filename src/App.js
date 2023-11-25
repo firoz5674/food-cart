@@ -11,7 +11,6 @@ import Cart from "./components/cart";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   BrowserRouter as Router,
-  Switch,
   Routes,
   Route,
   Link
@@ -32,9 +31,7 @@ function App() {
           <MainHeader />
           <Navbar />
           <main className='main-content'>
-            <div className='container'>
-              <div className='row'>
-                <div className='col-md-3 col-lg-3'>
+            {/* <div className='col-md-3 col-lg-3'>
                   <div className='filter-section'>
                     <Routes>
                       <Route exact path={"/" || "/home"} element={<Filter />} />
@@ -46,12 +43,12 @@ function App() {
                     <img src={offer2} className='img-fluid' alt="offer2" />
                     <img src={offer3} className='img-fluid' alt="offer3" />
                   </div>
-                </div>
-                  <Routes>
-                    <Route exact path={"/" || "/home"} element={<Card />} />
-                  </Routes>
-              </div>
-            </div>
+                </div> */}
+
+            {/* <ProductSlider /> */}
+            <Routes>
+              <Route exact path={"/" || "/home"} element={<Card />} />
+            </Routes>
           </main>
           <Routes>
             <Route exact path="/cart" element={<Cart />} />

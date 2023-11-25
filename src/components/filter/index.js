@@ -36,7 +36,7 @@ const Filter = () => {
   };
 
   return (
-    <div>
+    <>
       <h2 className='heading'>Filter Receipies</h2>
       <p className='desc'>Filter Your Favourite Food:</p>
       <div className='filters'>
@@ -115,7 +115,7 @@ const Filter = () => {
       <div className='filters'>
       <h2 className='sub-heading'>Quick Food:</h2>
       </div>
-    </div>
+    </>
   )
 }
 
