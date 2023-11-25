@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7b853a7b.css",
+    "main.js": "/static/js/main.bfad764f.js",
+    "static/media/circle.png": "/static/media/circle.7e058edf4ef6733e53dd.png",
+    "static/media/breakfast.jpg": "/static/media/breakfast.299f08b4f1bf6abcf678.jpg",
+    "static/media/fruits.jpg": "/static/media/fruits.d6de8235e3900d21af48.jpg",
+    "static/media/breakfast3.jpg": "/static/media/breakfast3.432587c882e62922e92e.jpg",
+    "static/media/veg.jpg": "/static/media/veg.dd9a27fe2fd67e453c48.jpg",
+    "static/media/dinner5.jpg": "/static/media/dinner5.1ceb712c6e4d937a1812.jpg",
+    "static/media/dinner3.jpg": "/static/media/dinner3.f68d74eac5d25bbd3b3f.jpg",
+    "static/media/lunch2.jpg": "/static/media/lunch2.abd0b51fe1b0236e0bde.jpg",
+    "static/media/grill-veg.jpg": "/static/media/grill-veg.7856b81da2bd3a46987f.jpg",
+    "static/media/dinner4.jpg": "/static/media/dinner4.825e9434a184aa780ae1.jpg",
+    "static/media/dinner.jpg": "/static/media/dinner.ef72c921493c9b0fdc31.jpg",
+    "static/media/breakfast4.jpg": "/static/media/breakfast4.70f9a54bf4ee87d88e68.jpg",
+    "static/media/dinner2.jpg": "/static/media/dinner2.dbfa3fbe6a9614f9de7d.jpg",
+    "static/media/eggs.jpg": "/static/media/eggs.f6ef0ae6050e51f0964d.jpg",
+    "static/media/lunch.jpg": "/static/media/lunch.f08b662891c53905d604.jpg",
+    "static/media/summer.jpg": "/static/media/summer.8d654f3741f0017d6e20.jpg",
+    "static/media/breakfast2.jpg": "/static/media/breakfast2.6d9f342cdeb6e1bd98de.jpg",
+    "static/media/soup.jpg": "/static/media/soup.31556573d9ae53aa5566.jpg",
+    "static/media/fruit-salad.jpg": "/static/media/fruit-salad.f4e94a7934a275507735.jpg",
+    "index.html": "/index.html",
+    "main.7b853a7b.css.map": "/static/css/main.7b853a7b.css.map",
+    "main.bfad764f.js.map": "/static/js/main.bfad764f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7b853a7b.css",
+    "static/js/main.bfad764f.js"
+  ]
+}
