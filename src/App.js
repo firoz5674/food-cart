@@ -19,6 +19,9 @@ import {
 import 'swiper/css';
 import 'swiper/css/pagination';
 import ProductSlider from './components/product-slider/ProductSlider';
+import offer1 from "./assets/images/food-offer.jpg";
+import offer2 from "./assets/images/offer2.jpg";
+import offer3 from "./assets/images/food4.jpg";
 
 function App() {
   return (
@@ -38,6 +41,11 @@ function App() {
                     </Routes>
                   </div>
                   <ProductSlider />
+                  <div className='offer-image'>
+                    <img src={offer1} className='img-fluid' alt="offer1" />
+                    <img src={offer2} className='img-fluid' alt="offer2" />
+                    <img src={offer3} className='img-fluid' alt="offer3" />
+                  </div>
                 </div>
                   <Routes>
                     <Route exact path={"/" || "/home"} element={<Card />} />
