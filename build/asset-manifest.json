@@ -1,8 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.7b853a7b.css",
-    "main.js": "/static/js/main.bfad764f.js",
+    "main.css": "/static/css/main.6cb83215.css",
+    "main.js": "/static/js/main.eaec8d98.js",
+    "static/media/automan-dinner2.jpg": "/static/media/automan-dinner2.dc84fcc903126ec65e8f.jpg",
+    "static/media/automan-dinner4.jpg": "/static/media/automan-dinner4.5b23543b3ddb34d40c76.jpg",
+    "static/media/automan-dinner3.jpg": "/static/media/automan-dinner3.603c7e7a4f9674d9fcfc.jpg",
     "static/media/circle.png": "/static/media/circle.7e058edf4ef6733e53dd.png",
+    "static/media/automan-dinner1.jpg": "/static/media/automan-dinner1.3117ca07517564ed6312.jpg",
+    "static/media/winter-dinner2.jpg": "/static/media/winter-dinner2.3117ca07517564ed6312.jpg",
+    "static/media/winter-dinner1.jpg": "/static/media/winter-dinner1.999832815bbfdb18f4d5.jpg",
     "static/media/breakfast.jpg": "/static/media/breakfast.299f08b4f1bf6abcf678.jpg",
     "static/media/fruits.jpg": "/static/media/fruits.d6de8235e3900d21af48.jpg",
     "static/media/breakfast3.jpg": "/static/media/breakfast3.432587c882e62922e92e.jpg",
@@ -22,11 +28,11 @@
     "static/media/soup.jpg": "/static/media/soup.31556573d9ae53aa5566.jpg",
     "static/media/fruit-salad.jpg": "/static/media/fruit-salad.f4e94a7934a275507735.jpg",
     "index.html": "/index.html",
-    "main.7b853a7b.css.map": "/static/css/main.7b853a7b.css.map",
-    "main.bfad764f.js.map": "/static/js/main.bfad764f.js.map"
+    "main.6cb83215.css.map": "/static/css/main.6cb83215.css.map",
+    "main.eaec8d98.js.map": "/static/js/main.eaec8d98.js.map"
   },
   "entrypoints": [
-    "static/css/main.7b853a7b.css",
-    "static/js/main.bfad764f.js"
+    "static/css/main.6cb83215.css",
+    "static/js/main.eaec8d98.js"
   ]
 }

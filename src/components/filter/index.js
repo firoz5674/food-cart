@@ -112,6 +112,9 @@ const Filter = () => {
           </li>
         </ul>
       </div>
+      <div className='filters'>
+      <h2 className='sub-heading'>Quick Food:</h2>
+      </div>
     </div>
   )
 }

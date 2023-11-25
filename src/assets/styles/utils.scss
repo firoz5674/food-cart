@@ -1,54 +1,107 @@
-
 .container {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
+
 .mb-3 {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
+
 .my-btn {
-    background-color: #d83838;
-    margin-top: 12px;
-    border-radius: 8px;
-    padding: 14px 32px;
-    font-weight: 600;
-    text-transform: capitalize;
-    color: white;
-    border: none;
-    font-size: 18px;
+  background-color: #d83838;
+  margin-top: 12px;
+  border-radius: 8px;
+  padding: 14px 32px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: white;
+  border: none;
+  font-size: 18px;
 }
 
 @media only screen and (min-width: 600px) {
-    .container {
-        max-width: 667px;
-    }
-}
-@media only screen and (min-width: 768px) {
-    .container {
-        max-width: 768px;
-    }
-}
-@media only screen and (min-width: 992px) {
-    .container {
-        max-width: 992px;
-    }
-}
-@media only screen and (min-width: 1200px) {
-    .container {
-        max-width: 1200px;
-    }
-}
-@media only screen and (min-width: 1400px) {
-    .container {
-        max-width: 1400px;
-    }
+  .container {
+    max-width: 667px;
+  }
 }
 
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .container {
+    max-width: 992px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .container {
+    max-width: 1400px;
+  }
+}
+
+
+.product-modal {
+  &.modal-dialog {
+    max-width: 70%;
+    @media (max-width: 1200px) {
+      max-width: 88%;
+    }
+    @media (max-width: 576px) {
+      margin: 0 auto;
+    }
+  }
+  .modal-content {
+    .modal-header {
+      border-bottom: none;
+      padding: 18px 20px 4px 0px;
+    }
+    .images-wrapper {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      .image {
+        flex: 0 0 31%;
+        max-width: 31%;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        @media (max-width: 1200px) {
+          flex: 0 0 48%;
+          max-width: 48%;
+        }
+        @media (max-width: 576px) {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+        > img {
+          width: 100%;
+          height: 320px;
+          object-fit: cover;
+        }
+      }
+    }
+    .modal-footer {
+      border-top: 0;
+      padding-right: 40px;
+      padding-bottom: 20px;
+      padding-top: 0;
+    }
+  }
+}

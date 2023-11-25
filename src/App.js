@@ -16,6 +16,9 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import 'swiper/css';
+import 'swiper/css/pagination';
+import ProductSlider from './components/product-slider/ProductSlider';
 
 function App() {
   return (
@@ -29,11 +32,12 @@ function App() {
             <div className='container'>
               <div className='row'>
                 <div className='col-md-3 col-lg-3'>
-                <div className='filter-section'>
-                  <Routes>
-                    <Route exact path={"/" || "/home"} element={<Filter />} />
-                  </Routes>
-                </div>
+                  <div className='filter-section'>
+                    <Routes>
+                      <Route exact path={"/" || "/home"} element={<Filter />} />
+                    </Routes>
+                  </div>
+                  <ProductSlider />
                 </div>
                   <Routes>
                     <Route exact path={"/" || "/home"} element={<Card />} />

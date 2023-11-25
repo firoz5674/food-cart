@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { setAllCards, upadateCards, updateCardFavourite, addToCart } from '../../state/action-creators';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import dinner from '../../assets/images/food-items/dinner.jpg'
 import breakfast from '../../assets/images/food-items/breakfast.jpg'
 import dinner2 from '../../assets/images/food-items/dinner2.jpg';
@@ -21,6 +22,13 @@ import grillVeg from '../../assets/images/food-items/grill-veg.jpg';
 import summerDrink from '../../assets/images/food-items/summer.jpg';
 import cartIcon from "../../assets/images/cart-black.png";
 import favoriteIcon from "../../assets/images/favorite-black.png";
+
+import automnDinner1 from "../../assets/images/food-images/automan-dinner1.jpg";
+import automnDinner2 from "../../assets/images/food-images/automan-dinner2.jpg";
+import automnDinner3 from "../../assets/images/food-images/automan-dinner3.jpg";
+import automnDinner4 from "../../assets/images/food-images/automan-dinner4.jpg";
+import automnDinner5 from "../../assets/images/food-images/winter-dinner1.jpg";
+import automnDinner6 from "../../assets/images/food-images/winter-dinner2.jpg";
 
 
 const cardData = [
@@ -156,6 +164,9 @@ const cardData = [
 
 
 const Card = () => {
+  const [modal, setModal] = useState(false);
+
+  const toggle = () => setModal(!modal);
   const reducer_redux = useSelector(state => state.reducer);
 
   console.log(reducer_redux, "reducer====>");
@@ -184,13 +195,43 @@ const Card = () => {
   }; return (
 
     <>
+      <Modal isOpen={modal} toggle={toggle} centered className='product-modal'>
+        <ModalHeader toggle={toggle}></ModalHeader>
+        <ModalBody>
+          <div className='images-wrapper'>
+            <div className='image'>
+              <img src={automnDinner1} className='img-fluid' alt="" />
+            </div>
+            <div className='image'>
+              <img src={automnDinner2} className='img-fluid' alt="" />
+            </div>
+            <div className='image'>
+              <img src={automnDinner3} className='img-fluid' alt="" />
+            </div>
+            <div className='image'>
+              <img src={automnDinner4} className='img-fluid' alt="" />
+            </div>
+            <div className='image'>
+              <img src={automnDinner5} className='img-fluid' alt="" />
+            </div>
+            <div className='image'>
+              <img src={automnDinner6} className='img-fluid' alt="" />
+            </div>
+          </div>
+        </ModalBody>
+        <ModalFooter>
+          <Button color="danger" onClick={toggle}>
+            Close
+          </Button>
+        </ModalFooter>
+      </Modal>
       <div className='col-md-9 col-lg-9'>
         <div className='row'>
           {cardItems?.map((card) => {
             const itemCountInCart = cart.filter((cartItem) => cartItem.id === card.id).length;
             return (
               <div className='col-md-6 col-lg-6 col-xl-4 product-col'>
-                <div className='product-card' key={card.id}>
+                <div className='product-card' key={card.id} onClick={toggle}>
                   <img src={card.img} alt="" />
                   <div className='product-card__body'>
                     <h3 className='title'>{card.title}</h3>
