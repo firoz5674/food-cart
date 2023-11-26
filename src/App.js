@@ -30,8 +30,7 @@ function App() {
           <TopHeader />
           <MainHeader />
           <Navbar />
-          <main className='main-content'>
-            {/* <div className='col-md-3 col-lg-3'>
+          {/* <div className='col-md-3 col-lg-3'>
                   <div className='filter-section'>
                     <Routes>
                       <Route exact path={"/" || "/home"} element={<Filter />} />
@@ -45,11 +44,10 @@ function App() {
                   </div>
                 </div> */}
 
-            {/* <ProductSlider /> */}
-            <Routes>
-              <Route exact path={"/" || "/home"} element={<Card />} />
-            </Routes>
-          </main>
+          {/* <ProductSlider /> */}
+          <Routes>
+            <Route exact path={"/" || "/home"} element={<Card />} />
+          </Routes>
           <Routes>
             <Route exact path="/cart" element={<Cart />} />
             <Route exact path="/login" element={<Login />} />

@@ -30,7 +30,8 @@ const Register = () => {
 
 
   return (
-    <div className='register'>
+    <div className='register-wrapper'>
+        <div className='register'>
         <div className='register-card'>
           <h2>Register</h2>
           <form>
@@ -47,6 +48,7 @@ const Register = () => {
               <button className='submit' onClick={handleSubmit}>Register</button>
             </div>
           </form>
+        </div>
         </div>
     </div>
   )

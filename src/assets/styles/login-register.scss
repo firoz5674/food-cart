@@ -1,26 +1,29 @@
-.register {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 45vh;
-  margin: 0px 22px;
-  .register-card {
-    border-radius: 8px;
-    width: 526px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    padding: 28px;
-    h2 {
-      font-weight: 600;
-      margin-bottom: 30px;
-    }
-    .input-field {
-      padding: 17px 10px;
-      width: 94%;
-      border: 1px solid #dedede;
-      border-radius: 6px;
-    }
-    button {
-      @extend .my-btn;
+.register-wrapper {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(237, 237, 237);
+  .register {
+    margin: 0px 22px;
+    .register-card {
+      border-radius: 8px;
+      width: 526px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      padding: 28px;
+      h2 {
+        font-weight: 600;
+        margin-bottom: 30px;
+      }
+      .input-field {
+        padding: 17px 10px;
+        width: 94%;
+        border: 1px solid #dedede;
+        border-radius: 6px;
+      }
+      button {
+        @extend .my-btn;
+      }
     }
   }
 }

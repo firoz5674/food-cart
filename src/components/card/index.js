@@ -33,6 +33,8 @@ import automnDinner6 from "../../assets/images/food-images/winter-dinner2.jpg";
 import offer1 from "../../assets/images/food-offer.jpg";
 import offer2 from "../../assets/images/offer2.jpg";
 import offer3 from "../../assets/images/food4.jpg";
+import offer5 from "../../assets/images/food5.jpg";
+import offer4 from "../../assets/images/food4.jpg";
 import ProductSlider from '../product-slider/ProductSlider';
 import Filter from '../filter';
 
@@ -233,6 +235,7 @@ const Card = () => {
         </ModalFooter>
       </Modal>
 
+      <main className='main-content'>
       <div className='container'>
         <div className='row'>
           <div className='col-md-3 col-lg-3'>
@@ -241,9 +244,9 @@ const Card = () => {
             </div>
             <ProductSlider />
             <div className='offer-image'>
-              <img src={offer1} className='img-fluid' alt="offer1" />
+              <img src={offer4} className='img-fluid' alt="offer1" />
               <img src={offer2} className='img-fluid' alt="offer2" />
-              <img src={offer3} className='img-fluid' alt="offer3" />
+              <img src={offer5} className='img-fluid' alt="offer3" />
             </div>
           </div>
           <div className='col-md-9 col-lg-9'>
@@ -278,6 +281,7 @@ const Card = () => {
           </div>
         </div>
       </div>
+      </main>
       {/* <div className='card-wrapper'>
         {cardItems?.map((card) => {
           const itemCountInCart = cart.filter((cartItem) => cartItem.id === card.id).length;
