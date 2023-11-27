@@ -1,23 +1,28 @@
-
-
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { registerUser } from '../../state/action-creators';
+import { loginUser } from '../../state/action-creators';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { Link } from 'react-router-dom';
+
 
 
 const Register = () => {
   const dispatch = useDispatch();
+ 
+
   const [formData, setFormData] = useState({
-    name: '',
     email: '',
     password: '',
   });
 
-  const handleSubmit = (e) => {
-
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
-    dispatch(registerUser(formData));
+    await dispatch(loginUser(formData));
+    // Show a success toast for login
+    toast.success('Login successful!');
+ 
+    
   };
 
   const handleChange = (e) => {
@@ -28,30 +33,32 @@ const Register = () => {
     }));
   };
 
-  
   return (
     <div className='register-wrapper'>
       <div className='register'>
         <div className='register-card'>
-          <h2>Register</h2>
+          <h2>Login</h2>
           <form>
             <div className='mb-4'>
-              <input type="text" name="name" className='input-field' value={formData.name} onChange={handleChange} placeholder="Name" />
+              <input type="email" className='input-field' name="email" value={formData.email} onChange={handleChange} placeholder="Email" />
             </div>
             <div className='mb-4'>
-              <input type="email" name="email" className='input-field' value={formData.email} onChange={handleChange} placeholder="Email" />
+              <input type="password" className='input-field' name="password" value={formData.password} onChange={handleChange} placeholder="Password" />
             </div>
             <div className='mb-4'>
-              <input type="password" name="password" className='input-field' value={formData.password} onChange={handleChange} placeholder="Password" />
-            </div>
-            <div className='mb-4'>
-              <button className='submit' onClick={handleSubmit}>Register</button>
+              <button onClick={handleSubmit} className='submit'>
+              <Link style={{ color: 'white', textDecoration: 'none' }} to='/'>Login</Link>
+
+                
+              </button>
             </div>
           </form>
         </div>
       </div>
-    </div>
-  )
-}
 
-export default Register
+      <ToastContainer />
+    </div>
+  );
+};
+
+export default Register;
